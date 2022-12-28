@@ -1,4 +1,4 @@
-import { Meme } from './memeObject';
+/*import { Meme } from './memeObject';
 import {Creator} from './creatorObject';
 
   function memeStringify(meme) {
@@ -79,4 +79,4 @@ import {Creator} from './creatorObject';
   };
   
   const API = { logIn, loadMemes, deleteMeme, addNewMeme, loadCreators}
-  export default API;
+  export default API;*/

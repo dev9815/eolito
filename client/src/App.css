@@ -50,11 +50,14 @@
 }
 
 .navColor{
-  background-color: darkblue;  
+  background-color: black;  
+  position: fixed !important;
+  width: 100%;
 }
 
 .login{
-  border: 1px solid orange !important;
+  border: 3px solid #66cbff !important;
+  border-radius: 30px 30px 30px 30px !important;
 }
 
 .listMeme{
@@ -104,11 +107,11 @@
 }
 
 .bg{
-  background-image: url("./bg/bg.png") !important;
+  /*background-image: url("./bg/bg.png") !important;
   background-repeat: no-repeat !important;
   background-size: cover  !important;
   background-position: center  !important;
-  background-attachment: fixed; 
+  background-attachment: fixed; */
 }
 
 .bg2{
@@ -161,6 +164,13 @@
 .loginFadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+.navSettings{
+  left: 25%;
+  border-radius: 20px 20px 0px 0px;
+  border: 2px solid black;
+  background-color: #66cbff;
 }
 
 .logo{

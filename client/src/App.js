@@ -1,122 +1,106 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState, useEffect } from "react";
-import { MemeList } from './components/memeListComponents.js'
+import Slider from './components/Slider/Slider.js'
 import { LoginForm } from './components/LoginComponents.js'
-import NavMenu from './components/NavbarComponents.js'
-import PlusButton from './components/PlusComponents.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import API from './API'
-
+import NavMenu from './components/NavbarComponents.js'
+import { useState, useRef, useEffect} from 'react';
+import {
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "firebase/auth";
+import { auth } from "./firebase.js"
+import { Dashboard } from './components/dashboard.js';
+ 
 function RouteElement(props) {
   return (
     <>
-      <MemeList {...props} />
+      <Slider {...props} />
     </>
   );
 }
 
-function App() {
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+}
+
+function App(props) {
   const [loggedIn, setLoggedIn] = useState(false); //no1
-  const [username, setUsername] = useState('');
-  const [creatorList, setCreatorList] = useState([]);
-  const [memeList, setList] = useState([]);
   const [clicked, isClicked] = useState(false);
-  const [dirty, setDirty] = useState(true);
-
-  useEffect(() => {
-    if (loggedIn) {
-      API.loadMemes('/api').then(newM => {
-        setList(newM);
-        setDirty(false);
-      })
+  /*const [eolito, setEolito] = useState(false);*/
+  const [user, setUser] = useState({});
+  const [email, setEmail] = useState("dev@gmail.com");
+  const [password, setPassword] = useState("Davide");
+  const [errorMessage, setErrorMessage] = useState('');
+  const [show, setShow] = useState(false);
+  
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+  console.log("login: " + loggedIn);
+ 
+  const login = async () => {
+    console.log("QUI");
+    try {
+      setLoggedIn(true);
+      setErrorMessage('');
+      const user = await signInWithEmailAndPassword(auth, email, password);
+      isClicked(false);
+    } catch (error) {
+      setLoggedIn(false);
+      setErrorMessage('Username o password errati')
     }
-  }, [loggedIn])
+  };
 
-  useEffect(() => {
-    API.loadCreators('/api/userCreator').then(newC => {
-      setCreatorList(newC);
-      setDirty(false);
-    })
-  },[])
+  const logout = async () => {
+    await signOut(auth);
+    setUser(null);
+  };
 
-  useEffect(() => {
-    if (!loggedIn) {
-      API.loadMemes('/api/visible/1').then(newM => {
-        setList(newM)
-        setDirty(false)
-      });
-    }
-  }, [!loggedIn])
-
-  useEffect(() => {
-    if (loggedIn) {
-      API.loadMemes('/api').then(newM => {
-        setList(newM);
-        setDirty(false);
-      });
-    }
-  }, [dirty])
-
-  useEffect(() => {
-    API.loadCreators('api/userCreator').then(newC => {
-      setCreatorList(newC);
-      setDirty(false);
-    });
-  }, [dirty])
-
-  const addMeme = (meme) => {
-    API.addNewMeme(meme).then(setDirty(true))
-  }
-
-  const deleteMeme = (memeId) => {
-    API.deleteMeme(memeId).then(setDirty(true))
-  }
-
-  return (
+ const previousLoggedIn = usePrevious(loggedIn)
+  
+  return (  
     <Router>
       <div>
-        <NavMenu isClicked={isClicked} username={username} loggedIn={loggedIn} setLoggedIn={setLoggedIn}></NavMenu>
-        <div className="container-fluid backdrop">
-          <div className="row vheight-100">
-            <Switch>
-              <Route exact path="/"
-                render={() => 
+        <NavMenu isClicked={isClicked} user={user} loggedIn={loggedIn} setLoggedIn={setLoggedIn} logout={logout}/> 
+        <h1>USER: {user?.email}</h1>
+        <Switch>
+            <Route exact path="/"
+              render={() => 
                 <>{
-                  clicked ? <Redirect to="/login" />: <RouteElement list={memeList} creatorList={creatorList} setCreatorList={setCreatorList} />
+                  clicked ? <Redirect to="/login" />: <RouteElement {...props} />
                   }
                 </>
                 } 
-              />
-              <Route exact path="/login" render={() =>
-                <>{
-                  loggedIn ? <Redirect to="/Homepage" /> : <LoginForm isClicked={isClicked} setLoggedIn={setLoggedIn} setUsername={setUsername} />
-                  }
-                </>
-                } 
-              />
+            />
 
-              <Route exact path="/Homepage"render={() => <>{
-                  loggedIn ?
-                    <RouteElement list={memeList} loggedIn={loggedIn} setLoggedIn={setLoggedIn} deleteMeme={deleteMeme}
-                      addMeme={addMeme} setDirty={setDirty} username={username} creatorList={creatorList} setCreatorList={setCreatorList}
-                    />
-                    : <Redirect to="/" />
-                 }</>
-                }  
+            <Route exact path="/login" 
+              render={() =>
+                <>{
+                  loggedIn ? <Redirect to="/dashboard" /> : <LoginForm login={login} errorMessage={errorMessage} setErrorMessage={setErrorMessage} email={email} setEmail={setEmail} password={password} setPassword={setPassword} />
+                  }
+                </>
+              } 
+            />
+
+            <Route exact path="/dashboard"
+              render={() => <>{
+                loggedIn?
+                  <Dashboard {...props} userEmail={user?.email} />
+                  : <Redirect to="/" />
+                }</>
+              }  
               />
-            </Switch>
-            <div className="d-flex justify-content-end fixed-bottom mr-2 mb-2">
-              <PlusButton loggedIn={loggedIn} memeList={memeList} username={username} setList={setList} setDirty={setDirty} addMeme={addMeme} />
-            </div>
-          </div>
-        </div>
+        </Switch>
       </div>
     </Router>
   );
 }
-
-
 
 export default App;
 
