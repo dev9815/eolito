@@ -62,22 +62,22 @@ function App() {
     <BrowserRouter basename="/eolito">
       <Switch>
         <Route exact path="/" render={() =><>{<Slider />}</>} />
-        <Route path="/project" render={() =><>{<Project />}</>} />
-        <Route path="/news" render={() =><>{<News />}</>} />
-        <Route path="/team" render={() =><>{<Team />}</>} />
-        <Route path="/management" render={() =><>{<Management />}</>} />
-        <Route path="/structural" render={() =><>{<Structural />}</>} />
-        <Route path="/dataanalysis" render={() =><>{<DataAnalysis />}</>} />
-        <Route path="/aerodynamic" render={() =><>{<Aerodynamic />}</>} />
-        <Route path="/it" render={() =><>{<It />}</>} />
-        <Route path="/electronics" render={() =><>{<Electronics />}</>} />
-        <Route path="/social" render={() =><>{<Social />}</>} />
-        <Route path="/gallery" render={() =><>{<Gallery />}</>} />
-        <Route path="/roadmap" render={() =><>{<Roadmap />}</>} />
-        <Route path="/rotors" render={() =><>{<Rotors />}</>} />
-        <Route path="/simulations" render={() =><>{<Simulations />}</>} />
-        <Route path="/expositions" render={() =><>{<Expositions />}</>} />
-        <Route path="/contact" render={() =><>{<Contact />}</>} />
+        <Route path="project" render={() =><>{<Project />}</>} />
+        <Route path="news" render={() =><>{<News />}</>} />
+        <Route path="team" render={() =><>{<Team />}</>} />
+        <Route path="management" render={() =><>{<Management />}</>} />
+        <Route path="structural" render={() =><>{<Structural />}</>} />
+        <Route path="dataanalysis" render={() =><>{<DataAnalysis />}</>} />
+        <Route path="aerodynamic" render={() =><>{<Aerodynamic />}</>} />
+        <Route path="it" render={() =><>{<It />}</>} />
+        <Route path="electronics" render={() =><>{<Electronics />}</>} />
+        <Route path="social" render={() =><>{<Social />}</>} />
+        <Route path="gallery" render={() =><>{<Gallery />}</>} />
+        <Route path="roadmap" render={() =><>{<Roadmap />}</>} />
+        <Route path="rotors" render={() =><>{<Rotors />}</>} />
+        <Route path="simulations" render={() =><>{<Simulations />}</>} />
+        <Route path="expositions" render={() =><>{<Expositions />}</>} />
+        <Route path="contact" render={() =><>{<Contact />}</>} />
       </Switch>
     </BrowserRouter>
       
