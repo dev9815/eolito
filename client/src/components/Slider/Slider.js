@@ -53,7 +53,7 @@ export default function Slider() {
             
             <div class="menu-home">
                 <div class="spacer"></div>
-                <div class="item"><span><Link to ="/project">Project</Link></span></div>
+                <div class="item"><span>Project</span></div>
                 <div class="item"><span>Team</span></div>
                 <div class="item"><span>Gallery</span></div>
                 <div class="item"><span>RoadMap</span></div>
