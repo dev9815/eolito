@@ -61,7 +61,7 @@ function App() {
     
     <HashRouter>
       <Switch>
-        <Route exact path="/eolito/" element ={<Slider />} />
+        <Route exact path="/eolito/" component ={<Slider />} />
         <Route path="/project" element ={<Project />} />
         <Route path="/news" element ={<News />} />
         <Route path="/team" element ={<Team />} />
