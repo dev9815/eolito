@@ -51,7 +51,7 @@ export default function Slider() {
             </div>
 
             
-            <div class="menu-home">
+            <div class="menu-home" style={{visibility: "visible"}}>
                 <div class="spacer"></div>
                 <div class="item"><span>Project</span></div>
                 <div class="item"><span>Team</span></div>
