@@ -2,7 +2,6 @@ import './Slider.css'
 import video from "./video/eolito.mp4";
 import ReactPlayer from "react-player";
 import FeatherIcon from 'feather-icons-react';
-import { Link } from 'react-router-dom';
 
 function revealUp() {
     var reveals = document.querySelectorAll(".revealUp");
@@ -50,14 +49,16 @@ export default function Slider() {
                 
             </div>
 
-            
-            <div class="menu-home" style={{visibility: "visible"}}>
+
+            <div class="menu-home">
                 <div class="spacer"></div>
-                <div class="item"><span>Project</span></div>
-                <div class="item"><span>Team</span></div>
-                <div class="item"><span>Gallery</span></div>
-                <div class="item"><span>RoadMap</span></div>
-                <div class="item"><span>Contact</span></div>
+                <div style={{visibility: "hidden"}} class="item" onClick={() => {window.location.href="./news"}}><span>News</span></div>
+                <div class="item" onClick={() => {window.location.href="./project"}}><span>Project</span></div>
+                <div class="item " onClick={() => {window.location.href="./team"}}><span>Team</span></div>
+                <div class="item" onClick={() => {window.location.href="./gallery"}}><span>Gallery</span></div>
+                <div class="item" onClick={() => {window.location.href="./roadmap"}}><span>RoadMap</span></div>
+                <div class="item" onClick={() => {window.location.href="./contact"}}><span>Contact</span></div>
+                <div class="label"><FeatherIcon className='mt-3' icon="menu" size="30"/></div>
             </div>
         </>
     
