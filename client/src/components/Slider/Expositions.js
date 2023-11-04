@@ -4,6 +4,8 @@ import '../../App.css';
 import { useState } from 'react';
 import galleryComponent from './galleryComponent';
 import Photo from './Photo';
+import { Link } from 'react-router-dom';
+
 function revealDown() {
     var reveals = document.querySelectorAll(".revealDown");
   

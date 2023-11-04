@@ -1,7 +1,7 @@
 import {Table, Image,} from 'react-bootstrap';
 import '../App.css';
 import FeatherIcon from 'feather-icons-react';
-
+import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 
 function revealRight() {

@@ -2,6 +2,7 @@ import {Row, Col, Image, Table, Button, Card, Modal } from 'react-bootstrap'
 import React from 'react'
 import FeatherIcon from 'feather-icons-react';
 import '../../App.css';
+import { Link } from 'react-router-dom';
 
 export function Gallery(props){
     const [gallerymodal, setGalleryModal] = React.useState(false);

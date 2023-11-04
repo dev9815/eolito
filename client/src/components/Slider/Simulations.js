@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import galleryComponent from './galleryComponent';
 import Photo from './Photo';
 import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 function revealDown() {
     var reveals = document.querySelectorAll(".revealDown");

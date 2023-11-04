@@ -1,10 +1,8 @@
 import {Table, Image, Button,} from 'react-bootstrap';
 import '../App.css';
 import FeatherIcon from 'feather-icons-react';
-
 import { useForm, ValidationError } from '@formspree/react';
-
-
+import { Link } from 'react-router-dom';
 
 function revealDown() {
     var reveals = document.querySelectorAll(".revealDown");

@@ -3,7 +3,7 @@ import '../App.css';
 import FeatherIcon from 'feather-icons-react';
 import { useState, useRef, useEffect } from 'react';
 import { BorderBottom } from 'react-bootstrap-icons';
-
+import { Link } from 'react-router-dom';
 
 function revealDown() {
     var reveals = document.querySelectorAll(".revealDown");

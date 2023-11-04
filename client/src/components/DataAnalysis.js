@@ -1,6 +1,7 @@
 import {Table, Image,} from 'react-bootstrap';
 import '../App.css';
 import FeatherIcon from 'feather-icons-react';
+import { Link } from 'react-router-dom';
 
 function revealDown() {
     var reveals = document.querySelectorAll(".revealDown");
