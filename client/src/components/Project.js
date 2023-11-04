@@ -146,14 +146,13 @@ function Project() {
 
       <div class="menu">
           <div class="spacer"></div>
-          <div style={{visibility: "hidden"}} class="item" onClick={() => {window.location.href="./news"}}><span>News</span></div>
-          <div class="item" onClick={() => {window.location.href="./project"}}><span>Project</span></div>
-          <div class="item " onClick={() => {window.location.href="./team"}}><span>Team</span></div>
-          <div class="item" onClick={() => {window.location.href="./gallery"}}><span>Gallery</span></div>
-          <div class="item" onClick={() => {window.location.href="./roadmap"}}><span>RoadMap</span></div>
-          <div class="item" onClick={() => {window.location.href="./contact"}}><span>Contact</span></div>
+          <div class="item" onClick={() => {}}><Link to="./project" className='menu-text'><span>Project</span></Link></div>
+          <div class="item " onClick={() => {}}><Link to="./team" className='menu-text'><span>Team</span></Link></div>
+          <div class="item" onClick={() => {}}><Link to="./gallery" className='menu-text'><span>Gallery</span></Link></div>
+          <div class="item" onClick={() => {}}><Link to="./roadmap" className='menu-text'><span>RoadMap</span></Link></div>
+          <div class="item" onClick={() => {}}><Link to="./contact" className='menu-text'><span>Contact</span></Link></div>
           <div class="label"><FeatherIcon className='mt-3' icon="menu" size="30"/></div>
-      </div>
+        </div>
     </>
   );
 }
