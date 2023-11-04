@@ -59,7 +59,7 @@ function App() {
       
     </Helmet>
     
-    <BrowserRouter basename = "/eolito">
+    <BrowserRouter>
       <Switch>
         <Route exact path="/eolito" element ={<Slider />} />
         <Route path="/project" element ={<Project />} />
