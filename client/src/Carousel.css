@@ -1,0 +1,69 @@
+.flickity-prev-next-button{
+  visibility: hidden;
+}
+
+.gallery-cell {
+  width: 50%;
+  margin-right: 60px;
+}
+
+.gallery{
+  margin-top: 70px !important;
+}
+
+.gallery-img{
+  border: 1px solid black;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+@media only screen and (min-width: 1024px) {
+  .description{
+    position: absolute;
+    width: 100%;
+    margin-top: 408px;
+    font-size: 25px;
+    background: rgba(180, 180, 180, .5);
+    text-shadow: 1px 1px 1px black, 0 0 0.2em black, 0 0 0.2em black;
+    color: white;
+  }
+  .text-description{
+    font-family: Arial;
+  }
+
+  .img-height{
+    height: 450px !important;
+  }
+  .team-height{
+    height: 450px !important;
+  }
+  .card-height{
+    height: 350px !important;
+  }
+
+
+}
+@media only screen and (min-width: 1440px) {
+
+  .description{
+    position: absolute;
+    width: 100%;
+    margin-top: 558px;
+    font-size: 25px;
+    background: rgba(180, 180, 180, .5);
+    text-shadow: 1px 1px 1px black, 0 0 0.2em black, 0 0 0.2em black;
+    color: white;
+  }
+  .text-description{
+    font-family: Arial;
+  }
+
+  .img-height{
+    height: 400px !important;
+  }
+  
+  .team-height{
+    height: 600px !important;
+  }
+}
