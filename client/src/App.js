@@ -7,7 +7,7 @@ import { Management } from './components/Management.js'
 import { Team} from './components/Team.js'
 import { News } from './components/News.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as HashRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { useState, useRef, useEffect} from 'react';
 
 import {Helmet} from "react-helmet";
@@ -62,22 +62,22 @@ function App() {
     <BrowserRouter basename = "/eolito">
       <Switch>
         <Route exact path="/eolito" element ={<Slider />} />
-        <Route exact path="/project" element ={<Project />} />
-        <Route exact path="/news" element ={<News />} />
-        <Route exact path="/team" element ={<Team />} />
-        <Route exact path="/management" element ={<Management />} />
-        <Route exact path="/structural" element ={<Structural />} />
-        <Route exact path="/dataanalysis" element ={<DataAnalysis />} />
-        <Route exact path="/aerodynamic" element ={<Aerodynamic />} />
-        <Route exact path="/it" element ={<It />} />
-        <Route exact path="/electronics" element ={<Electronics />} />
-        <Route exact path="/social" element ={<Social />} />
-        <Route exact path="/gallery" element ={<Gallery />} />
-        <Route exact path="/roadmap" element ={<Roadmap />} />
-        <Route exact path="/rotors" element ={<Rotors />} />
-        <Route exact path="/simulations" element ={<Simulations />} />
-        <Route exact path="/expositions" element ={<Expositions />} />
-        <Route exact path="/contact" element ={<Contact />} />
+        <Route path="/project" element ={<Project />} />
+        <Route path="/news" element ={<News />} />
+        <Route path="/team" element ={<Team />} />
+        <Route path="/management" element ={<Management />} />
+        <Route path="/structural" element ={<Structural />} />
+        <Route path="/dataanalysis" element ={<DataAnalysis />} />
+        <Route path="/aerodynamic" element ={<Aerodynamic />} />
+        <Route path="/it" element ={<It />} />
+        <Route path="/electronics" element ={<Electronics />} />
+        <Route path="/social" element ={<Social />} />
+        <Route path="/gallery" element ={<Gallery />} />
+        <Route path="/roadmap" element ={<Roadmap />} />
+        <Route path="/rotors" element ={<Rotors />} />
+        <Route path="/simulations" element ={<Simulations />} />
+        <Route path="/expositions" element ={<Expositions />} />
+        <Route path="/contact" element ={<Contact />} />
       </Switch>
     </BrowserRouter>
       
