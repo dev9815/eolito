@@ -79,7 +79,7 @@ function revealRight() {
 function Team() {
   return (
       <>
-      <div className='content-bg'>
+      <div className='content-bg' onLoad={() => {window.scrollTo(0,0)}}>
       <h2 style={{position:'fixed', marginTop:'-60px', marginLeft: '1em', cursor:'pointer'}} className='goodFont' onClick={()=> window.location.href= "./"}>
         <Image className = 'rotating' style={{width:'80px', height:'80px'}} src={process.env.PUBLIC_URL + `/Imgs//logo.svg`} />
       </h2>

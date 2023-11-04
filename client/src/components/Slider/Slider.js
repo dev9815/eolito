@@ -26,7 +26,7 @@ window.addEventListener("scroll", revealUp);
 export default function Slider() {
     return (
         <>
-        <div className='content-bg'>
+        <div className='content-bg' onLoad={() => {window.scrollTo(0,0)}}>
                 <ReactPlayer
                         className='back-video'
                         url={video}

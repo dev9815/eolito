@@ -14,7 +14,7 @@ export function Gallery(props){
             <Image className = 'rotating' style={{width:'80px', height:'80px'}} src={process.env.PUBLIC_URL + `/Imgs//logo.svg`} />
         </h2>
       
-        <div className = 'p-5 content-bg' id='gallery'>
+        <div className = 'p-5 content-bg' id='gallery' onLoad={() => {window.scrollTo(0,0)}}>
             
             <center>
                 <Row className='mt-5'>
