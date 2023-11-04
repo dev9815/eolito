@@ -83,28 +83,36 @@ function Team() {
       <h2 style={{position:'fixed', marginTop:'-60px', marginLeft: '1em', cursor:'pointer'}} className='goodFont' onClick={()=> window.location.href= "./"}>
         <Image className = 'rotating' style={{width:'80px', height:'80px'}} src={process.env.PUBLIC_URL + `/Imgs//logo.svg`} />
       </h2>
-        <div className="gallery js-flickity animate__animated animate__zoomIn animate__slower" style={{marginTop:'20px'}} data-flickity-options='{ "wrapAround": true }'>
+    
+      <Carousel className="animate__animated animate__zoomIn animate__slower" style={{marginTop:'20px'}}>
+        <Carousel.Item>
           <div className="gallery-cell">  
             <Image className = "text-center w-100 team-height mt-5" src = {process.env.PUBLIC_URL + '/Imgs/team3.png'}/>
           </div>
-      
+        </Carousel.Item>
+        <Carousel.Item>
           <div className="gallery-cell">
             <Image className = "text-center w-100 team-height mt-5" src = {process.env.PUBLIC_URL + '/Imgs/team2.png'}/>
           </div>
-      
+        </Carousel.Item>
+        <Carousel.Item>
           <div className="gallery-cell">
-              <Image className = "text-center w-100 mt-5 team-height" src = {process.env.PUBLIC_URL + '/Imgs/team4.png'}/>
+            <Image className = "text-center w-100 mt-5 team-height" src = {process.env.PUBLIC_URL + '/Imgs/team4.png'}/>
           </div>
-      
+        </Carousel.Item>
+        <Carousel.Item>
           <div className="gallery-cell">
-              <Image className = "text-center w-100 team-height mt-5" src = {process.env.PUBLIC_URL + '/Imgs/team5.png'}/>
+            <Image className = "text-center w-100 team-height mt-5" src = {process.env.PUBLIC_URL + '/Imgs/team5.png'}/>
           </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="gallery-cell">
+            <Image className = "text-center w-100 team-height mt-5" src = {process.env.PUBLIC_URL + '/Imgs/team1.png'}/>
+          </div>
+        </Carousel.Item>
+      </Carousel>
 
-          <div className="gallery-cell">
-              <Image className = "text-center w-100 team-height mt-5" src = {process.env.PUBLIC_URL + '/Imgs/team1.png'}/>
-          </div>
-        </div>
-        <center><h1 style={{fontSize: '80px', marginTop:'80px'}}className = 'shadowBlack goodFont animate__animated animate__zoomIn'>Team OrGanization</h1></center>
+
 
         <center>
           <Table className='table-team table' style={{marginTop:'0px'}}>
