@@ -54,11 +54,11 @@ export default function Slider() {
             <div class="menu-home">
                 <div class="spacer"></div>
                 <div style={{visibility: "hidden"}} class="item" onClick={() => {window.location.href="./news"}}><span>News</span></div>
-                <Link to ="/project"><div class="item"><span>Project</span></div></Link>
-                <Link to ="/team"><div class="item"><span>Team</span></div></Link>
-                <Link to ="/gallery"><div class="item"><span>Gallery</span></div></Link>
-                <Link to ="/roadmap"><div class="item"><span>RoadMap</span></div></Link>
-                <Link to ="/contact"><div class="item"><span>Contact</span></div></Link>
+                <div class="item"><span><Link to ="/project">Project</Link></span></div>
+                <div class="item"><span><Link to ="/team">Team</Link></span></div>
+                <div class="item"><span><Link to ="/gallery">Gallery</Link></span></div>
+                <div class="item"><span><Link to ="/roadmap">RoadMap</Link></span></div>
+                <div class="item"><span><Link to ="/contact">Contact</Link></span></div>
             </div>
         </>
     
