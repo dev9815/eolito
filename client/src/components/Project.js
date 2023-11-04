@@ -60,13 +60,12 @@ window.addEventListener("scroll", revealLeft);
 
 function Project() {
   
-  console.log("close: " + document.getElementById("closeButton"))
   return (
       <>
       <h2 style={{position:'fixed', marginTop:'-75px', marginLeft: '1em', cursor:'pointer'}} className='goodFont' onClick={()=> window.location.href= "./"}>
         <Image className = 'rotating' style={{width:'80px', height:'80px'}} src={process.env.PUBLIC_URL + `/Imgs//logo.svg`} />
       </h2>
-      <div className="content-bg">
+      <div className="content-bg" onLoad={() => {window.scrollTo(0,0)}}>
         <center><h1 style={{fontSize:'50px', marginTop:'90px'}} className='shadowBlack animate__animated animate__flipInX animate__slow'><b>PROJECT</b></h1></center>
         <center>
           <Table className='' style ={{marginTop:'-30px'}}>
