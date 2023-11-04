@@ -24,7 +24,7 @@ import { Simulations } from './components/Slider/Simulations';
 import { Expositions } from './components/Slider/Expositions';
 import { Contact } from './components/Contact';
 import { Rotors } from './components/Slider/Rotors';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min.js';
+
 
 
 
