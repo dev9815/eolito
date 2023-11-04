@@ -109,12 +109,11 @@ function Team() {
         <center>
           <Table className='table-team table' style={{marginTop:'0px'}}>
               <tr className='text-center'>
-              <Link to = "./management" className="menu-text">
-                <td className='table-cell revealLeft' onClick={()=> {}} >
+                <td className='table-cell revealLeft' >
                     <FeatherIcon className='mt-3 iconColor' icon="list" size="100"/>
-                    <p className='mt-4'><b>Management and comunication</b></p>
+                    <p className='mt-4'><b><Link to = "./management" className="menu-text">Management and comunication</Link></b></p>
                 </td>
-              </Link>
+              
               <Link to = "./structural" className="menu-text">
                 <td className='table-cell w-25 revealUp' onClick={()=> {}}>
                     <FeatherIcon className='mt-3 iconColor' icon="tool" size="100"/>
