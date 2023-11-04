@@ -59,7 +59,7 @@ function App() {
       
     </Helmet>
     
-    <BrowserRouter>
+    <BrowserRouter basename={window.location.pathname || ''}>
       <Switch>
         <Route exact path="/eolito/" render={() =><>{<Slider />}</>} />
         <Route path="/project" render={() =><>{<Project />}</>} />
