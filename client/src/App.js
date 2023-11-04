@@ -61,7 +61,7 @@ function App() {
     
     <BrowserRouter basename="/eolito">
       <Switch>
-        <Route exact path="/eolito/" render={() =><>{<Slider />}</>} />
+        <Route exact path="/" render={() =><>{<Slider />}</>} />
         <Route path="/project" render={() =><>{<Project />}</>} />
         <Route path="/news" render={() =><>{<News />}</>} />
         <Route path="/team" render={() =><>{<Team />}</>} />
