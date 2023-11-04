@@ -114,46 +114,41 @@ function Team() {
                     <p className='mt-4'><b><Link to = "./management" className="menu-text">Management and comunication</Link></b></p>
                 </td>
               
-              <Link to = "./structural" className="menu-text">
+              
                 <td className='table-cell w-25 revealUp' onClick={()=> {}}>
                     <FeatherIcon className='mt-3 iconColor' icon="tool" size="100"/>
                     <p className='mt-4'><b>Structural Design & Materials</b></p>
                 </td>
-              </Link>  
-              <Link to = "./dataanalysis" className="menu-text">
+              
+              
                 <td className='table-cell w-25 revealDown' onClick={()=> {}}>
                     <FeatherIcon className='mt-3 iconColor' icon="layers" size="100"/>
                     <p className='mt-4'><b>Data Analysis & Optimization</b></p>
                 </td>
-              </Link>
+              
               </tr>
               <tr className='text-center'>
-              <Link to = "./aerodinamic" className="menu-text">
+              
                 <td className='table-cell w-25 revealLeft' onClick={()=> {}}>
                     <FeatherIcon className='mt-3 iconColor' icon="wind" size="100"/>
                     <p className='mt-4'><b>Aerodynamic</b></p>
                 </td>
-              </Link>
-              <Link to = "./it" className="menu-text">
+              
+              
                 <td className='table-cell w-25 revealUp' onClick={()=> {}}>
                     <FeatherIcon className='mt-3 iconColor' icon="layers" size="100"/>
                     <p className='mt-4'><b>Information Technology Area</b></p>
                 </td>
-              </Link>
-              <Link to = "./electronics" className="menu-text">
                 <td className='table-cell w-25 revealDown' onClick={()=> {}}>
                     <FeatherIcon className='mt-3 iconColor' icon="zap" size="100"/>  
                     <p><b>Electrical and electronics</b></p>
                 </td>
-              </Link>
               </tr>
               <tr className='text-center'>
-              <Link to = "./social" className="menu-text">
                 <td className='table-cell w-25 revealLeft' onClick={()=> {}}>
                     <FeatherIcon className='mt-3 iconColor' icon="instagram" size="100"/>
                     <p className='mt-4'><b>Design and social media</b></p>
                 </td>
-              </Link>
                 </tr>
           </Table>
         </center>
