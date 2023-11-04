@@ -366,6 +366,7 @@
     bottom: 685px;
     height: 50px;
     margin-left: 590px;
+    display: block;
   }
   .menu:hover {
     pointer-events: all;
