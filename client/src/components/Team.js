@@ -109,38 +109,53 @@ function Team() {
         <center>
           <Table className='table-team table' style={{marginTop:'0px'}}>
               <tr className='text-center'>
-              <td className='table-cell revealLeft' onClick={()=> window.location.href="./management"} >
-                  <FeatherIcon className='mt-3 iconColor' icon="list" size="100"/>
-                  <p className='mt-4'><b>Management and comunication</b></p>
-              </td>
-              <td className='table-cell w-25 revealUp' onClick={()=> window.location.href="./structural"}>
-                  <FeatherIcon className='mt-3 iconColor' icon="tool" size="100"/>
-                  <p className='mt-4'><b>Structural Design & Materials</b></p>
-              </td>
-              <td className='table-cell w-25 revealDown' onClick={()=> window.location.href="./dataanalysis"}>
-                  <FeatherIcon className='mt-3 iconColor' icon="layers" size="100"/>
-                  <p className='mt-4'><b>Data Analysis & Optimization</b></p>
-              </td>
+              <Link to = "./management" className="menu-text">
+                <td className='table-cell revealLeft' onClick={()=> {}} >
+                    <FeatherIcon className='mt-3 iconColor' icon="list" size="100"/>
+                    <p className='mt-4'><b>Management and comunication</b></p>
+                </td>
+              </Link>
+              <Link to = "./structural" className="menu-text">
+                <td className='table-cell w-25 revealUp' onClick={()=> {}}>
+                    <FeatherIcon className='mt-3 iconColor' icon="tool" size="100"/>
+                    <p className='mt-4'><b>Structural Design & Materials</b></p>
+                </td>
+              </Link>  
+              <Link to = "./dataanalysis" className="menu-text">
+                <td className='table-cell w-25 revealDown' onClick={()=> {}}>
+                    <FeatherIcon className='mt-3 iconColor' icon="layers" size="100"/>
+                    <p className='mt-4'><b>Data Analysis & Optimization</b></p>
+                </td>
+              </Link>
               </tr>
               <tr className='text-center'>
-              <td className='table-cell w-25 revealLeft' onClick={()=> window.location.href="./aerodynamic"}>
-                  <FeatherIcon className='mt-3 iconColor' icon="wind" size="100"/>
-                  <p className='mt-4'><b>Aerodynamic</b></p>
-              </td>
-              <td className='table-cell w-25 revealUp' onClick={()=> window.location.href="./it"}>
-                  <FeatherIcon className='mt-3 iconColor' icon="layers" size="100"/>
-                  <p className='mt-4'><b>Information Technology Area</b></p>
-              </td>
-              <td className='table-cell w-25 revealDown' onClick={()=> window.location.href="./electronics"}>
-                  <FeatherIcon className='mt-3 iconColor' icon="zap" size="100"/>  
-                  <p><b>Electrical and electronics</b></p>
-              </td>
+              <Link to = "./aerodinamic" className="menu-text">
+                <td className='table-cell w-25 revealLeft' onClick={()=> {}}>
+                    <FeatherIcon className='mt-3 iconColor' icon="wind" size="100"/>
+                    <p className='mt-4'><b>Aerodynamic</b></p>
+                </td>
+              </Link>
+              <Link to = "./it" className="menu-text">
+                <td className='table-cell w-25 revealUp' onClick={()=> {}}>
+                    <FeatherIcon className='mt-3 iconColor' icon="layers" size="100"/>
+                    <p className='mt-4'><b>Information Technology Area</b></p>
+                </td>
+              </Link>
+              <Link to = "./electronics" className="menu-text">
+                <td className='table-cell w-25 revealDown' onClick={()=> {}}>
+                    <FeatherIcon className='mt-3 iconColor' icon="zap" size="100"/>  
+                    <p><b>Electrical and electronics</b></p>
+                </td>
+              </Link>
               </tr>
               <tr className='text-center'>
-              <td className='table-cell w-25 revealLeft' onClick={()=> window.location.href="./social"}>
-                  <FeatherIcon className='mt-3 iconColor' icon="instagram" size="100"/>
-                  <p className='mt-4'><b>Design and social media</b></p></td>
-              </tr>
+              <Link to = "./social" className="menu-text">
+                <td className='table-cell w-25 revealLeft' onClick={()=> {}}>
+                    <FeatherIcon className='mt-3 iconColor' icon="instagram" size="100"/>
+                    <p className='mt-4'><b>Design and social media</b></p>
+                </td>
+              </Link>
+                </tr>
           </Table>
         </center>
         </div>
