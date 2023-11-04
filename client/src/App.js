@@ -7,7 +7,7 @@ import { Management } from './components/Management.js'
 import { Team} from './components/Team.js'
 import { News } from './components/News.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import { useState, useRef, useEffect} from 'react';
 
 import {Helmet} from "react-helmet";
@@ -59,9 +59,9 @@ function App() {
       
     </Helmet>
     
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
-        <Route exact path="/eolito" element ={<Slider />} />
+        <Route exact path="/eolito/" element ={<Slider />} />
         <Route path="/project" element ={<Project />} />
         <Route path="/news" element ={<News />} />
         <Route path="/team" element ={<Team />} />
@@ -79,7 +79,7 @@ function App() {
         <Route path="/expositions" element ={<Expositions />} />
         <Route path="/contact" element ={<Contact />} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
       
       
 
