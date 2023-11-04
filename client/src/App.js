@@ -61,23 +61,23 @@ function App() {
     
     <BrowserRouter basename = "/eolito">
       <Switch>
-        <Route exact path="/eolito/" element ={<Slider />} />
-        <Route path="/project" render={() =><>{<Project />}</>} />
-        <Route path="/news" render={() =><>{ <News />}</>} />
-        <Route path="/team" render={() =><>{ <Team />}</>} />
-        <Route path="/management" render={() =><>{<Management />}</>} />
-        <Route path="/structural" render={() =><>{ <Structural />}</>} />
-        <Route path="/dataanalysis" render={() =><>{ <DataAnalysis />}</>} />
-        <Route path="/aerodynamic" render={() =><>{ <Aerodynamic />}</>} />
-        <Route path="/it" render={() =><>{ <It />}</>} />
-        <Route path="/electronics" render={() =><>{ <Electronics />}</>} />
-        <Route path="/social" render={() =><>{ <Social />}</>} />
-        <Route path="/gallery" render={() =><>{ <Gallery />}</>} />
-        <Route path="/roadmap" render={() =><>{ <Roadmap />}</>} />
-        <Route path="/rotors" render={() =><>{ <Rotors />}</>} />
-        <Route path="/simulations" render={() =><>{ <Simulations />}</>} />
-        <Route path="/expositions" render={() =><>{ <Expositions />}</>} />
-        <Route path="/contact" render={() =><>{ <Contact />}</>} />
+        <Route exact path="/eolito" element ={<Slider />} />
+        <Route exact path="/project" element ={<Project />} />
+        <Route exact path="/news" element ={<News />} />
+        <Route exact path="/team" element ={<Team />} />
+        <Route exact path="/management" element ={<Management />} />
+        <Route exact path="/structural" element ={<Structural />} />
+        <Route exact path="/dataanalysis" element ={<DataAnalysis />} />
+        <Route exact path="/aerodynamic" element ={<Aerodynamic />} />
+        <Route exact path="/it" element ={<It />} />
+        <Route exact path="/electronics" element ={<Electronics />} />
+        <Route exact path="/social" element ={<Social />} />
+        <Route exact path="/gallery" element ={<Gallery />} />
+        <Route exact path="/roadmap" element ={<Roadmap />} />
+        <Route exact path="/rotors" element ={<Rotors />} />
+        <Route exact path="/simulations" element ={<Simulations />} />
+        <Route exact path="/expositions" element ={<Expositions />} />
+        <Route exact path="/contact" element ={<Contact />} />
       </Switch>
     </BrowserRouter>
       
